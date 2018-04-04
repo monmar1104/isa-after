@@ -67,5 +67,23 @@
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.8.0-beta0</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-core</artifactId>
+      <version>5.4.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-broker -->
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-broker</artifactId>
+      <version>5.14.3</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-client -->
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-client</artifactId>
+      <version>5.14.3</version>
+    </dependency>
   </dependencies>
 </project>
