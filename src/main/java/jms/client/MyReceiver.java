@@ -21,10 +21,9 @@ public class MyReceiver {
             factory = new ActiveMQConnectionFactory(
                     ActiveMQConnection.DEFAULT_BROKER_URL);
             connection = factory.createConnection();
-            connection = factory.createConnection();
             connection.start();
-            session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-            destination = session.createQueue("SAMPLEQUEUE");
+            session = connection.createSession(false, TopicSession.AUTO_ACKNOWLEDGE);
+            destination = session.createTopic("SAMPLETOPIC");
             consumer = session.createConsumer(destination);
             Message message = consumer.receive();
 

@@ -49,3 +49,17 @@ R
 "src/main/java/queue/QueueImpl.java,5/d/5dda3c2de6e5d83fda0fec1d33baab9098accf62
 R
 "src/main/java/stack/StackImpl.java,9/a/9ade489230792a903c9ca576eba403f79ea739c6
+n
+>.idea/libraries/Maven__org_fusesource_hawtbuf_hawtbuf_1_11.xml,6/6/663667c5f39906f95884ff8d812beeb45ee9d503
+~
+N.idea/libraries/Maven__org_apache_activemq_activemq_openwire_legacy_5_14_3.xml,8/4/845a75a96c8b5338605cde98935cd5613cd641ed
+X
+(src/main/java/jms/server/MyListener.java,3/d/3de453a3c0486ccc6dbed4dc0a720ba318950e92
+u
+E.idea/libraries/Maven__org_apache_activemq_activemq_client_5_14_3.xml,e/f/eff2a5faa053341f4cdd55d3218e06b49d0cf836
+u
+E.idea/libraries/Maven__org_apache_activemq_activemq_broker_5_14_3.xml,7/6/76ac8d7488b9bba04177540f7b91ec64e025f8d7
+X
+(src/main/java/jms/client/MyReceiver.java,0/8/08f81e29a3181f9e1d30ae9528153895da0919f9
+V
+&src/main/java/jms/server/MySender.java,9/2/92c7f492f72c5679c301e5963c17a86e118a58b1

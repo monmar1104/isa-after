@@ -4,6 +4,7 @@ import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
+import java.util.Scanner;
 
 public class MySender {
 
@@ -17,20 +18,23 @@ public class MySender {
 
     }
 
-    public void sendMessage() {
+    public void sendMessage(String m) {
 
         try {
             factory = new ActiveMQConnectionFactory(
                     ActiveMQConnection.DEFAULT_BROKER_URL);
             connection = factory.createConnection();
             connection.start();
-            session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
-            destination = session.createQueue("SAMPLEQUEUE");
+            session = connection.createSession(false, TopicSession.AUTO_ACKNOWLEDGE);
+            destination = session.createTopic("SAMPLETOPIC");
             producer = session.createProducer(destination);
             TextMessage message = session.createTextMessage();
-            message.setText("Hello ...This is a sample message..sending from FirstClient");
+            message.setText(m);
             producer.send(message);
             System.out.println("Sent: " + message.getText());
+            if (m.equals("exit")){
+                connection.close();
+            }
 
         } catch (JMSException e) {
             e.printStackTrace();
@@ -39,7 +43,15 @@ public class MySender {
 
     public static void main(String[] args) {
         MySender sender = new MySender();
-        sender.sendMessage();
+        Scanner scanner = new Scanner(System.in);
+        boolean scannerChecker = true;
+        while (scannerChecker) {
+            String message = scanner.nextLine();
+            if (message.equals("exit")){
+                scannerChecker=false;
+            }
+            sender.sendMessage(message);
+        }
     }
 
 }
